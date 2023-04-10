@@ -1,0 +1,16 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #ffffff;
+    min-height: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 1px 10px #0004;
+}
+
+.App-link {}
