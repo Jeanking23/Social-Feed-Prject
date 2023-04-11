@@ -1,6 +1,5 @@
 {
-    "posts": [
-        {
+    "posts": [{
             "id": 1,
             "name": "John",
             "text": "This is my first post.",

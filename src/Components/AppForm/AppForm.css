@@ -1,0 +1,24 @@
+.social-feed {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.name,
+.post {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 3px;
+}

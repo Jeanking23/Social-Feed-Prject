@@ -46,28 +46,25 @@ const AppForm = (props) => {
         setPosts(updatedPosts);
     };
 
-    return ( <
-            div className = "social-feed" >
-            <
-            form onSubmit = { handleSubmit } >
-            <
-            label >
-            Name <
-            input type = "text"
-            value = { name }
-            onChange = { handleNameChange }
-            /> <
-            /label> <
-            label >
-            Text <
-            textarea class = "form-control"
-            id = "exampleFormControlTextarea1"
-            value = { text }
-            onChange = { handleTextChange }
-            /> <
-            /label> <
-            button type = "submit" > Create < /button> <
-            /form> {
+    return (
+        <div className = "social-feed" >
+        <div className = "form-container">
+         <form onSubmit = { handleSubmit } >
+        <label >
+        Name
+        <input type = "text"
+        value = { name }
+        onChange = { handleNameChange }
+       className='name'/>
+        </label>
+        <label>
+        Text
+        <textarea  value = { text }
+        onChange = { handleTextChange } className='post'/>
+        </label>
+        <button type = "submit" class="btn btn-primary"> Create </button>
+        </form> 
+        </div>{
             posts.map(post => ( <
                 AppPost key = { post.id }
                 post = { post }
@@ -75,9 +72,9 @@ const AppForm = (props) => {
                 onDislike = { handleDislike }
                 />
             ))
-        } <
-        /div>
-);
+        }
+        </div>
+    );
 }
 
 export default AppForm;
