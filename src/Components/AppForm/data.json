@@ -1,0 +1,18 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "name": "John",
+            "text": "This is my first post.",
+            "likes": 0,
+            "dislikes": 0
+        },
+        {
+            "id": 2,
+            "name": "Jane",
+            "text": "This is my second post.",
+            "likes": 0,
+            "dislikes": 0
+        }
+    ]
+}

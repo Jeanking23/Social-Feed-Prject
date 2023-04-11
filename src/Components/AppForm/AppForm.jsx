@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import Post from './Post';
+import AppPost from '../AppPost/AppPost'
+import data from './data.json';
+import './AppForm.css'
 
 
-const AppFor = (props) => {
+const AppForm = (props) => {
     const [name, setName] = useState('');
     const [text, setText] = useState('');
     const [posts, setPosts] = useState(data.posts);
@@ -45,30 +47,29 @@ const AppFor = (props) => {
     };
 
     return ( <
-        div className = "social-feed" >
-        <
-        h1 > My Social Feed < /h1> <
-        form onSubmit = { handleSubmit } >
-        <
-        label >
-        Name:
-        <
-        input type = "text"
-        value = { name }
-        onChange = { handleNameChange }
-        /> < /
-        label > <
-        label >
-        Text:
-        <
-        textarea value = { text }
-        onChange = { handleTextChange }
-        /> < /
-        label > <
-        button type = "submit" > Post < /button> < /
-        form > {
+            div className = "social-feed" >
+            <
+            form onSubmit = { handleSubmit } >
+            <
+            label >
+            Name <
+            input type = "text"
+            value = { name }
+            onChange = { handleNameChange }
+            /> <
+            /label> <
+            label >
+            Text <
+            textarea class = "form-control"
+            id = "exampleFormControlTextarea1"
+            value = { text }
+            onChange = { handleTextChange }
+            /> <
+            /label> <
+            button type = "submit" > Create < /button> <
+            /form> {
             posts.map(post => ( <
-                Post key = { post.id }
+                AppPost key = { post.id }
                 post = { post }
                 onLike = { handleLike }
                 onDislike = { handleDislike }
@@ -76,7 +77,7 @@ const AppFor = (props) => {
             ))
         } <
         /div>
-    );
+);
 }
 
 export default AppForm;
